@@ -1,12 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
-int findUnique(vector<int>arr){
-int ans=0;
-for(int i=0;i<arr.size();i++){
-    ans=ans^arr[i];
+int findUnique(vector<int>v){
+    int ans=0;
+    for(int i=0;i<v.size();i++){
+        ans=ans^v[i];
+    }
+    return ans;
 
-}
-return ans;
 }
 int main(){
 int n;
@@ -15,7 +15,7 @@ vector<int>arr(n);
 for(int i=0;i<arr.size();i++){
     cin>>arr[i];
 }
-
 cout<<findUnique(arr)<<endl;
+
     return 0;
 }
