@@ -11,12 +11,10 @@ for(int i=0;i<arr.size();i++){
       brr[j]=INT_MIN;
       ans.push_back(element);
     }
-    
   }
 }
 for(int i=0;i<ans.size();i++){
   cout<<ans[i]<<" ";
 }
-
   return 0;
 }
