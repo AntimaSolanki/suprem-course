@@ -4,6 +4,7 @@ int main(){
 int a=5;
 cout<<a<<endl;
 cout<<&a<<endl;
+
 int b=5;
 cout<<b<<endl;
 cout<<&b<<endl;
