@@ -1,23 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
-void max(int arr[],int n,int i,int& maxi){
+void findMax(int arr[],int i,int n,int& maxi){
     //base case 
     if(i>=n){
         return ;
     }
-    //ek case solve kr doo
-    if(arr[i]>maxi){
+    if(maxi<arr[i]){
         maxi=arr[i];
     }
-    //baaki recursion kr lega
-    max(arr,n,i+1,maxi);
+    findMax(arr,i+1,n,maxi);
 }
 int main(){
-int arr[]={10,20,30};
-int n=3;
-int maxi=INT_MIN; 
+int arr[5]={10,20,30,40,50};
+int n=5;
 int i=0;
-max(arr,n,i,maxi);
-cout<<maxi<<endl;
+int maxi=INT_MIN;
+findMax(arr,i,n,maxi);
+cout<<"maxium value is "<<maxi<<endl;
     return 0;
 }

@@ -10,6 +10,7 @@ int climb(int n){
 int main(){
 int n;
 cin>>n;
-cout<<climb(n);
+int ans=climb(n);
+cout<<ans<<endl;
     return 0;
 }
