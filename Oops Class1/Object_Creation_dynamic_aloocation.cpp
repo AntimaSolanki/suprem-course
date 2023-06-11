@@ -6,6 +6,20 @@ int weight;
 public:
 int age;
 string name;
+//default Constructor 
+Animal(){
+  this->weight=0;
+  this->age=0;
+  this->name="";
+  cout<<"Constructor Called"<<endl;
+}
+
+//paramerteised Constructor 
+Animal(int age){
+  this->age=20;
+  cout<<"paramertised construcor called"<<endl;
+}
+
 //state and properites 
 void eat(){
 cout<<"Eating"<<endl;
@@ -55,5 +69,14 @@ suresh->name="anu";
 //second way to do dynamicallly
 suresh->eat();
 suresh->sleep();
+
+
+Animal a;
+Animal *c=new Animal();
+
+//parameterised Constructor
+Animal a(10);
+Animal *d=new Animal();
+
     return 0;
 }
