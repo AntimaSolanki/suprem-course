@@ -1,30 +1,82 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Animal{
-    public:
+private:
+int weight;
+public:
 int age;
 string name;
+//default Constructor 
+Animal(){
+  this->weight=0;
+  this->age=0;
+  this->name="";
+  cout<<"Constructor Called"<<endl;
+}
+
+//paramerteised Constructor 
+Animal(int age){
+  this->age=20;
+  cout<<"paramertised construcor called"<<endl;
+}
+
+//state and properites 
 void eat(){
-    cout<<"eating "<<endl;
+cout<<"Eating"<<endl;
 }
 void sleep(){
-    cout<<"sleeping "<<endl;
+cout<<"Sleepping"<<endl;
 }
-void play(){
-    cout<<"playing "<<endl;
+int getweight(){
+    return weight;
+}
+//int setweight(int w){
+  //  weight=w;
+//}
+int setweight(int weight){
+   this-> weight=weight;
 }
 };
 int main(){
-//object creaton -->dyynamic allocation 
-Animal* suresh=new Animal;
-(*suresh).age=12;
+//Object Creation 
+
+//Static 
+Animal ramesh ;
+ramesh.age=22;
+ramesh.name="Antima";
+cout<<"age of ramesh :"<<ramesh.age<<endl;
+cout<<"name of ramesh :"<<ramesh.name<<endl;
+//cout<<"weight of ramesh :"<<ramesh.weight<<endl;-->
+
+ramesh.eat();
+ramesh.sleep();
+
+ramesh.setweight(45);
+cout<<"weight"<<ramesh.getweight()<<endl;
+
+//Dynamic 
+Animal *suresh=new Animal;
+(*suresh).age=22;
 (*suresh).name="Anu";
 
-//alternate  way
+//second way to dynmaically 
 suresh->age=22;
-suresh->name="Antima";
+suresh->name="anu";
 
+(*suresh).eat();
+(*suresh).sleep();
+
+//second way to do dynamicallly
 suresh->eat();
-suresh->play();
+suresh->sleep();
+
+
+Animal a;
+Animal *c=new Animal();
+
+//parameterised Constructor
+Animal a(10);
+Animal *d=new Animal();
+
     return 0;
 }
